@@ -10,7 +10,7 @@ ENV RESIN_MACHINE_NAME %%RESIN_MACHINE_NAME%%
 # Version number of gateway software.
 # (Incrementing this simply forces Docker to flush its cache
 #  and thus forces a full rebuild. Not used outside of Dockerfile.)
-ENV TTN_GATEWAY_SOFTWARE 51
+ENV TTN_GATEWAY_SOFTWARE 1
 
 # Copy the build and run environment
 COPY . /opt/ttn-gateway/
