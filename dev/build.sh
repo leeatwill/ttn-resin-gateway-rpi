@@ -30,6 +30,18 @@ fi
 ./build
 popd
 
+# Build WiringPi so that we can do Raspberry Pi I/O
+if [ ! -d Adafruit_Blinka ]; then
+    https://github.com/adafruit/Adafruit_Blinka.git
+    pushd Adafruit_Blinka
+else
+    pushd Adafruit_Blinka
+    git reset --hard
+    git pull
+fi
+./build
+popd
+
 # Build LoRa gateway app for this specific platform
 if [ ! -d single_chan_pkt_fwd ]; then
     git clone https://github.com/adafruit/single_chan_pkt_fwd.git
